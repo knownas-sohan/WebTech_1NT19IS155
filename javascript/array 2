@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myinputarr = [];
+        
+        var size = prompt("enter the size of array");
+         
+        for(var a=0; a<size; a++) 
+        {
+             myinputarr[a] = prompt('Enter array Element ' + (a+1));
+        }
+        console.log(myinputarr);
+        
+        var max=0;
+        var maxans=-1;
+        var tempmax=0;
+        
+         for(var i=0;i<size;i++)
+         {
+             for(var j=0;j<size;j++)
+             {
+                 if(myinputarr[i]===myinputarr[j])
+                 {
+                     tempmax+=1
+                 }
+             }
+             if(max<tempmax)
+             {
+                 max=tempmax
+                 maxans=myinputarr[i];
+                 console.log(maxans)
+             }
+         }
+
+         document.write(maxans)
+        
+         </script>
+    
+</body>
+</html>
